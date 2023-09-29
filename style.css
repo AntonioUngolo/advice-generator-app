@@ -1,0 +1,50 @@
+:root{
+    --Dark-Blue: #202733;
+    --Dark-Grayish-Blue: #313A48;
+    --Neon-Green: #53FFAA;
+    --Light-Cyan: #CEE3E9
+}
+
+body{
+    background: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--Light-Cyan);
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+#advice_card{
+    border-radius: 15px;
+    max-width: 540px;
+    background-color: var(--Dark-Grayish-Blue);
+    box-sizing: border-box;
+    padding: 48px 48px 72px 48px;
+    text-align: center;
+    position: relative;
+}
+
+#advice_number{
+    color: var(--Neon-Green);
+    font-size: 18px;
+}
+
+#advice{
+    letter-spacing: -0.3px;
+}
+
+#advice_dice{
+position: absolute;
+bottom: 0;
+left: 50%;
+background-color: var(--Neon-Green);
+box-sizing: border-box;
+padding: 20px;
+border-radius: 50%;
+display: flex;
+transform: translate(-50%, 50%);
+}
