@@ -1,50 +1,99 @@
-:root{
-    --Dark-Blue: #202733;
-    --Dark-Grayish-Blue: #313A48;
-    --Neon-Green: #53FFAA;
-    --Light-Cyan: #CEE3E9
+:root {
+  --Dark-Blue: #202733;
+  --Dark-Grayish-Blue: #313a48;
+  --Neon-Green: #53ffaa;
+  --Light-Cyan: #cee3e9;
 }
 
-body{
-    background: var(--Dark-Blue);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--Light-Cyan);
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
-
+body {
+  background: var(--Dark-Blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--Light-Cyan);
+  font-size: 20px;
+  font-family: "Manrope", sans-serif;
+  gap: 40px;
 }
 
-#advice_card{
-    border-radius: 15px;
-    max-width: 540px;
-    background-color: var(--Dark-Grayish-Blue);
-    box-sizing: border-box;
-    padding: 48px 48px 72px 48px;
-    text-align: center;
-    position: relative;
+#advice_card {
+  border-radius: 15px;
+  max-width: 540px;
+  background-color: var(--Dark-Grayish-Blue);
+  box-sizing: border-box;
+  padding: 48px 48px 72px 48px;
+  text-align: center;
+  position: relative;
+  height: max-content;
+  transition: all 0.8s ease-in-out;
 }
 
-#advice_number{
-    color: var(--Neon-Green);
-    font-size: 18px;
+.hidden {
+  transform: translateY(30%);
+  opacity: 0;
 }
 
-#advice{
-    letter-spacing: -0.3px;
+@media screen and (max-width: 580px) {
+  #advice_card {
+    max-width: 90vw;
+  }
 }
 
-#advice_dice{
-position: absolute;
-bottom: 0;
-left: 50%;
-background-color: var(--Neon-Green);
-box-sizing: border-box;
-padding: 20px;
-border-radius: 50%;
-display: flex;
-transform: translate(-50%, 50%);
+#advice_number {
+  color: var(--Neon-Green);
+  font-size: 18px;
+}
+
+#advice {
+  letter-spacing: -0.3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.old {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.new {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+}
+
+#advice_dice {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--Neon-Green);
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  transform: translate(-50%, 50%);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+#advice_dice:hover {
+  box-shadow: 0px 0px 40px 0px var(--Neon-Green);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 14px;
+  transition: all 2s ease-in-out;
+  animation-delay: 1s;
+}
+
+.attribution a {
+  color: #cee3e9;
+}
+
+.attribution a:hover {
+  color: var(--Neon-Green);
 }

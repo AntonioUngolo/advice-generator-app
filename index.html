@@ -5,29 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
     <title>Frontend Mentor | Advice generator app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-    <section id="advice_card">
+    <section id="advice_card" class="hidden">
       <p id="advice_number">Advice #<span>117</span></p>
-      <h2 id="advice">“It is easy to sit up and take notice, what's difficult is getting up and taking action.”</h2>
-      <div>
-        <img src="images/pattern-divider-desktop.svg">
+      <h2 id="advice">
+        “It is easy to sit up and take notice, what's difficult is getting up
+        and taking action.”
+      </h2>
+      <div class="divider">
+        <picture>
+          <source
+            media="(max-width: 580px)"
+            srcset="/images/pattern-divider-mobile.svg"
+          />
+          <source
+            media="(min-width: 581px)"
+            srcset="images/pattern-divider-desktop.svg"
+          />
+          <img
+            src="images/pattern-divider-desktop.svg"
+            alt="Chris standing up holding his daughter Elva"
+          />
+        </picture>
+        <!-- <img src="images/pattern-divider-desktop.svg" /> -->
       </div>
       <div id="advice_dice">
-        <img src="/images/icon-dice.svg" alt="" srcset="">
+        <img src="/images/icon-dice.svg" alt="" srcset="" />
       </div>
     </section>
 
-    <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>. </div>
+    <div class="attribution hidden">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Antonio Ungolo</a>.
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
