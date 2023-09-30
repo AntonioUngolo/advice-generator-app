@@ -22,6 +22,7 @@ const transitionAdvice = function (data) {
   }, 1000);
 
   setTimeout(() => {
+    if (!data) advice.textContent = `Sorry, no advice for you this time`;
     const { slip } = data;
     adviceNumber.textContent = slip.id;
     advice.textContent = slip.advice;
@@ -33,13 +34,19 @@ const transitionAdvice = function (data) {
 const adviceAPI = function () {
   fetch(`https://api.adviceslip.com/advice/${randomNumber()}`)
     .then((res) => {
+      if (!res.ok) throw new Error("There is some error");
       return res.json();
     })
     .then((data) => {
+      if (!data) throw new Error("error");
       // const { slip } = data;
       // adviceNumber.textContent = slip.id;
       // advice.textContent = slip.advice;
       transitionAdvice(data);
+    })
+    .catch((err) => {
+      console.log(err);
+      advice.textContent = `Sorry, no advice for you this time`;
     });
 };
 
