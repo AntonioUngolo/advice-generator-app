@@ -12,7 +12,7 @@ setTimeout(() => {
 }, 2000);
 
 const randomNumber = function () {
-  return parseInt(Math.random() * 250);
+  return parseInt(Math.random() * 240);
 };
 
 const transitionAdvice = function (data) {
